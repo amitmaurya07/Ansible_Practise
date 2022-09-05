@@ -1,6 +1,7 @@
 ---
 - name: Update Packages
-  apt:
+  ansible.builtin.apt:
+    name: Update Packages
     update_cache: yes
 
 - name: Install Opendjd8
