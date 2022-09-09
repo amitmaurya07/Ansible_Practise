@@ -6,7 +6,7 @@
    - name: Installing Webserver Playbook on Ubuntu 
      apt: 
       name: "{{mywebpackonubuntu}}"
-      state: present
+      state: started
    - name: Installing webserver Playbook on Redhat
      apt: 
       name: "{{mywebpackonRedhat}}"
