@@ -1,7 +1,7 @@
 - name: Downloading tar file
   get_url:
-    url: https://archive.apache.org/tomcat/tomcat-10/v10.0.22/bin/apache-tomcat-10.0.22.tar.gz
-    dest: /home/ubuntu/apache-tomcat-10.0.22.tar.gz 
+    url: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
+    dest: /home/ubuntu/apache-tomcat-10.0.20.tar.gz
     force_basic_auth: yes
 
 - name: Create a directory
@@ -11,6 +11,6 @@
 
 - name: Extract the tar file.
   command: 
-    cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-10.0.22.tar.gz -C /opt/tomcat --strip-components=1
+    cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-10.0.20.tar.gz -C /opt/tomcat --strip-components=1
     # To execute only one time tar file we provide IDEMPOTENTS by create command.
     creates: /opt/tomcat/NOTICE
