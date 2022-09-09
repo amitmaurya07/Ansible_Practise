@@ -5,9 +5,9 @@
   tasks:
    - name: Installing Webserver Playbook on Ubuntu 
      apt: 
-      name: {{"mywebpackonubuntu"}}
+      name: "{{mywebpackonubuntu}}"
       state: present
    - name: Installing webserver Playbook on Redhat
      apt: 
-      name: {{"mywebpackonRedhat"}}
+      name: "{{mywebpackonRedhat}}"
       state: present
