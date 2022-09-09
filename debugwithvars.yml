@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+   - name: Display the OS
+     debug:
+      msg:"{{ansible_distribution}}"
+   - name: Display Version
+     debug:
+      msg:{{ansible_distribution_version}}
+       
