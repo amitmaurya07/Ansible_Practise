@@ -8,7 +8,13 @@
       name: "{{mywebpackonubuntu}}"
       state: present
    - name: Installing webserver Playbook on Redhat
-     apt: 
+     yum: 
+      name: "{{mywebpackonRedhat}}"
+      state: present
+     when: ansible_os_family =="Redhat"
+
+   - name: I want to start webserver on Redhat
+     service: 
       name: "{{mywebpackonRedhat}}"
       state: started
      when: ansible_os_family =="Redhat"
