@@ -1,7 +1,7 @@
 ---
 - name: Create a Tomcat User 
   user:
-   name: Tomcat
+   name: tomcat
    shell: /bin/false
    home: /opt/tomcat # directory
    state: present
