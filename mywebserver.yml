@@ -3,7 +3,11 @@
   become: yes
   gather_facts: yes 
   tasks:
-   - name: Installing Webserver Playbook 
+   - name: Installing Webserver Playbook on Ubuntu 
      apt: 
-      name: apache2
+      name: {{"mywebpackonubuntu"}}
+      state: present
+   - name: Installing webserver Playbook on Redhat
+     apt: 
+      name: {{"mywebpackonRedhat"}}
       state: present
